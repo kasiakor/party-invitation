@@ -1,0 +1,14 @@
+﻿body {
+    margin: 0;
+    padding: 40px;
+    font-size: 30px;
+    background-image: url("../images/anchor.png");
+}
+.invitation-main {
+    text-align: center;
+}
+
+.invitation-img {
+    width: 450px;
+    height: auto;
+}

@@ -1,0 +1,23 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" href="~/css/mainStyle.css">
+</head>
+<body>
+    <div class="invitation-main">
+        @ViewBag.Hello Sailors!
+        <p>Come to meet our fantastic team that have crossed Atlantic Ocean</p>
+        <img class="invitation-img" src="~/images/sailing_ship.jpg" alt="sailing boat Athena" />
+        @*Html helper method, takes params: text and action to perform*@
+        <div>@Html.ActionLink("RSVP Now", "RsvpForm")</div>
+    </div>
+</body>
+</html>
