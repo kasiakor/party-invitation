@@ -11,7 +11,7 @@
     text-align: center;
 }
 
-.invitation-main p, .invitation-main h1 {
+    .invitation-main p, .invitation-main h1 {
         color: #244484;
         padding: 20px 0;
     }
@@ -33,9 +33,11 @@
         height: auto;
     }
 }
-
+/*form style*/
+.panel {
+    margin-top: 45px;
+}
 /*form validation style*/
-
 .field-validation-error {
     color: red;
 }
