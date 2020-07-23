@@ -4,6 +4,7 @@
     font-size: 30px;
     background-image: url("../images/anchoropac.png");
     background-repeat: repeat-x;
+    background-color: #c7e0f3;
 }
 
 .invitation-main {
@@ -12,11 +13,17 @@
 
 .invitation-main p, .invitation-main h1 {
         color: #244484;
+        padding: 20px 0;
     }
 
 .invitation-img {
     width: 100%;
     height: auto;
+}
+
+.btn a {
+    color: white;
+    text-decoration: none;
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
