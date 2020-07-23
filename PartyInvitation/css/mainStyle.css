@@ -2,13 +2,30 @@
     margin: 0;
     padding: 40px;
     font-size: 30px;
-    background-image: url("../images/anchor.png");
+    background-image: url("../images/anchoropac.png");
+    background-repeat: repeat-x;
 }
 .invitation-main {
     text-align: center;
 }
 
-.invitation-img {
-    width: 450px;
-    height: auto;
+.invitation-main p {
+    color: #244484;
 }
+
+.invitation-img {
+        width: 100%;
+        height: auto;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .invitation-img {
+        width: 50%;
+        height: auto;
+    }
+}
+
+
+
+

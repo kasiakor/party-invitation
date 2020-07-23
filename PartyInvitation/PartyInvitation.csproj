@@ -91,6 +91,7 @@
     <Content Include="css\mainStyle.css" />
     <Content Include="Global.asax" />
     <Content Include="images\anchor.png" />
+    <Content Include="images\anchoropac.png" />
     <Content Include="images\sailing_ship.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
