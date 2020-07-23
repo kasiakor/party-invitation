@@ -10,19 +10,23 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Thanks</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/bootstrap-theme.css">
     <link rel="stylesheet" type="text/css" href="~/Content/Styles.css">
 </head>
 <body>
     <div class="invitation-main">
         <h1>Thank you for your response, @Model.Name!</h1>
-        @if (Model.WillAttend == true)
-        {
-            <p>It is great that you are coming! <br /> See you soon.</p>
-        }
-        else
-        {
-    <p>Sorry to hear that. <br /> Maybe next time.</p>
-        }
+        <div class="lead">
+            @if (Model.WillAttend == true)
+            {
+                <p>It is great that you are coming! <br /> See you soon.</p>
+            }
+            else
+            {
+                <p>Sorry to hear that. <br /> Maybe next time.</p>
+            }
+        </div>
     </div>
 </body>
 </html>
