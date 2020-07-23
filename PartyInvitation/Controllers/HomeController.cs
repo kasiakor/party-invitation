@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PartyInvitation.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,9 +16,17 @@ namespace PartyInvitation.Controllers
             ViewBag.Hello = hour < 12 ? "Good morning" : "Good evening";
             return View();
         }
+        [HttpGet]
         public ViewResult RsvpForm()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ViewResult RsvpForm(GuestResponse guestResponse)
+        {
+            //we render vie Thanks and pass the object guestResponse
+            return View("Thanks", guestResponse);
         }
     }
 }
