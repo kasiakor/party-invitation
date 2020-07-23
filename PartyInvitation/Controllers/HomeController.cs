@@ -25,8 +25,17 @@ namespace PartyInvitation.Controllers
         [HttpPost]
         public ViewResult RsvpForm(GuestResponse guestResponse)
         {
-            //we render vie Thanks and pass the object guestResponse
-            return View("Thanks", guestResponse);
+            if (ModelState.IsValid)
+            {
+                //no validation errors
+                //we render vie Thanks and pass the object guestResponse
+                return View("Thanks", guestResponse);
+            }
+            else
+            {
+                //there are validation errors
+                return View();
+            }
         }
     }
 }

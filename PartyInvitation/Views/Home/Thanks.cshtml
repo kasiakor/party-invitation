@@ -10,17 +10,18 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Thanks</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/Styles.css">
 </head>
 <body>
-    <div>
+    <div class="invitation-main">
         <h1>Thank you for your response, @Model.Name!</h1>
         @if (Model.WillAttend == true)
         {
-            <p>It is great that you are coming! See you soon.</p>
+            <p>It is great that you are coming! <br /> See you soon.</p>
         }
         else
         {
-            <p>Sorry to hear that. Maybe next time.</p>
+    <p>Sorry to hear that. <br /> Maybe next time.</p>
         }
     </div>
 </body>

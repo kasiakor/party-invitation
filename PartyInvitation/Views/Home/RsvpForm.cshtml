@@ -10,16 +10,18 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>RsvpForm</title>
-    <link rel="stylesheet" type="text/css" href="~/css/mainStyle.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Styles.css">
 </head>
 <body>
     <div class="invitation-main">
+        @*displays a list of error messages above the form*@
+        @Html.ValidationSummary()
         @*helper method, submitted by the browesr as a POST request, action method will receive the data*@
         @using (Html.BeginForm())
         {
-            <p>Your name: @Html.TextBoxFor(x => x.Name, new {@class = "input-style" })</p>
-            <p>Your email: @Html.TextBoxFor(x => x.Email, new {@class = "input-style" })</p>
-            <p>Your phone: @Html.TextBoxFor(x => x.Phone, new {@class = "input-style" })</p>
+            <p>Your name: @Html.TextBoxFor(x => x.Name)</p>
+            <p>Your email: @Html.TextBoxFor(x => x.Email)</p>
+            <p>Your phone: @Html.TextBoxFor(x => x.Phone)</p>
             <p>
                 Wiil you attend?
                 @Html.DropDownListFor(x => x.WillAttend, new[] {
@@ -27,7 +29,7 @@
                Value = bool.TrueString},
                new SelectListItem() {Text = "No, I cannot come",
                Value = bool.FalseString }
-               }, "Choose an option", new {@class = "input-style" })
+               }, "Choose an option")
             </p>
             <input type="submit" value="Submit RSVP" />
         }

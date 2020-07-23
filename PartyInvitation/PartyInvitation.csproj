@@ -88,7 +88,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="css\mainStyle.css" />
+    <Content Include="Content\Styles.css" />
     <Content Include="Global.asax" />
     <Content Include="images\anchor.png" />
     <Content Include="images\anchoropac.png" />
