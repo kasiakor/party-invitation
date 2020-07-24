@@ -15,6 +15,24 @@
     <link rel="stylesheet" type="text/css" href="~/Content/Styles.css">
 </head>
 <body>
+    @{  
+        try
+        {
+
+            WebMail.SmtpServer = "smtp.example.com";
+            WebMail.SmtpPort = 587;
+            WebMail.EnableSsl = true;
+            WebMail.UserName = "mySmtpUserName";
+            WebMail.Password = "mySmtpPassword";
+            WebMail.From = "rsvp@example.com";
+
+            WebMail.Send("party-host@example.com", "RSVP Notification", Model.Name + "is" + (Model.WillAttend == true ? "": "not") + "coming to party");
+        }
+        catch (Exception)
+        {
+        <p>Sorry we could NOT send this email</p>
+        }
+    }
     <div class="invitation-main">
         <h1>Thank you for your response, @Model.Name!</h1>
         <div class="lead">
